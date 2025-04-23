@@ -1,0 +1,3 @@
+# Ignore python things
+__pycache__
+.venv
