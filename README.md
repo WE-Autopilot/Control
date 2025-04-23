@@ -1,6 +1,6 @@
 # WEAP AUTO WORKSPACE
 
-Contains all main entry point and actuation code for the car.
+Contains all main entry point and actuation code, as well as any relevant functions to control sensor output or movement of the car.
 
 ## Setup
 
