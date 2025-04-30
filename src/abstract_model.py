@@ -6,7 +6,7 @@ class AbstractModel(ABC):
         pass
 
     @abstractmethod
-    def compute(self, obs: dict, timestamp: int)-> tuple[float, float]:
+    def eval(self, obs: dict, timestamp: int)-> tuple[float, float]:
         '''
         This should return the speed, steering angle, and optionally current set of waypoints to be rendered.
 
