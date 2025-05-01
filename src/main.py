@@ -11,8 +11,6 @@ def start(model: AbstractModel):
     actuator = Actuator()
     model.init()
 
-    # TODO: guarantee loop time?
-
     start_time = time.time() * 1000 # millis
     while True:
         scan, err = lidar.get_scan()
@@ -22,9 +20,9 @@ def start(model: AbstractModel):
             continue
         
         current_time = int(time.time() * 1000 - start_time)
-        # print(f"Current time: {current_time} ms")
+
         speed, theta = model.eval(scan, timestamp=current_time)
-        # print(f"Speed: {speed}, Theta: {theta}")
+
         actuator.apply_with_pass_filter(speed, theta)
 
         if model.is_done():

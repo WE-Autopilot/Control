@@ -40,7 +40,7 @@ def set_angle(angle):
 
     angle = max(-30, min(30, angle)) # CLAMPING INPUT TO -30 to 30
 
-    duty_cycle = 7.5 + (angle_deg / 30.0) * 1.5
+    duty_cycle = 7.5 + (angle / 30.0) * 1.5
     pwm.ChangeDutyCycle(duty_cycle)
     time.sleep(0.5)
     pwm.ChangeDutyCycle(0)

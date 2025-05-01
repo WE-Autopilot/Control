@@ -1,4 +1,4 @@
 from .actuator import Actuator
-from .v_actuator import VirtualActuator
+from .virtual_actuator import VirtualActuator
 
 __all__ = ["Actuator", "VirtualActuator"]
