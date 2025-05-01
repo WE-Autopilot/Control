@@ -32,7 +32,7 @@ def init():
 def update(frame):
     """Update the plot with new LIDAR scan data."""
     # Get a fresh scan from the LIDAR
-    scan_data = lidar.get_scan(num_packets=20)  # Use fewer packets for faster updates
+    scan_data = lidar.get_scan(num_points=5000)  # Use fewer packets for faster updates
     
     if scan_data:
         # Convert to polar coordinates for plotting

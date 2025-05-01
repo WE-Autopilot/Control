@@ -7,8 +7,8 @@ import time
 def start(model: AbstractModel):
     print("Starting WEAP auto...")
 
-    lidar = VirtualLidar()
-    actuator = VirtualActuator()
+    lidar = Lidar()
+    actuator = Actuator()
     model.init()
 
     # TODO: guarantee loop time?
